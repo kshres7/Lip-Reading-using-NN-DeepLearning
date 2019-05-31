@@ -1,8 +1,6 @@
 Lip Reading using Neural Network and Deep Learning 
 
-By Karan Shrestha
-
-Undergraduate - CS senior capstone project  
+Undergraduate - Senior Capstone project for Computer Science Department at Earlham College
 
 This project provides an implementation of deep learning neural network capable of training a lip reading model. The trained model is used to predict words from the speaker with input image frames using web camera in a web application. 
 
