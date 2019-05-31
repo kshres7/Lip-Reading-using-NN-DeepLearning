@@ -1,0 +1,230 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+
+body {
+    background-color: white;
+    
+}
+
+.blocker {
+    background-color: rgba(0,0,0,0.40) !important;
+}
+
+#overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    -o-transform : scaleX(-1);
+    -webkit-transform : scaleX(-1);
+    transform : scaleX(-1);
+    -ms-filter : fliph; /*IE*/
+    filter : fliph; /*IE*/
+
+    display: inline-block;
+}
+
+#videoel {
+    -o-transform : scaleX(-1);
+    -webkit-transform : scaleX(-1);
+    transform : scaleX(-1);
+    -ms-filter : fliph; /*IE*/
+    filter : fliph; /*IE*/
+
+    display: inline-block;
+}
+
+.video-container {
+    position : relative;
+}
+
+strong {
+    font-weight: bold;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-top: 1em;
+    margin-bottom: 1 em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+}
+li {
+    display: list-item;
+}
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 0.8em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+.nogum {
+    display : none;
+}
+
+.btn {
+    font-family: 'Lato';
+    font-size: 16px;
+}
+
+#mouthCanvas {
+
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    z-index: 100;
+
+    width: 64px;
+    border: 1px solid black;
+    -o-transform : scaleX(-1);
+    -webkit-transform : scaleX(-1);
+    transform : scaleX(-1);
+
+}
+
+#predictionResult {
+    color: red;
+    vertical-align: top;
+}
+
+
+#help {
+    font-size: 24px;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+
+#debug {
+    font-size: 24px;
+    position: absolute;
+    right: 15px;
+    top: 40px;
+}
+
+#stats {
+    font-size: 8pt;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    color: #494949;
+}
+
+.cell{
+    z-index: 200;
+    width: 480px;
+    height: 360px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0; left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    font-size:120px;
+    font-family:Frijole;
+    overflow: hidden;
+}
+.num{
+    position:absolute;
+    width: 1em;
+    color:#E53F39;
+    line-height: 1em;
+    text-align: center;
+    text-shadow:1px 1px 2px rgba(255,255,255,.3);
+}
+
+#fps {
+
+    text-align: right;
+    color: yellow;
+
+    position: absolute;
+    top: 0px;
+    bottom: 120px;
+    z-index: 1;
+    padding-top: 5px;
+    padding-right: 0px;
+
+    width: 350px;
+
+    font-weight: bold;
+}
+
+
+/*** PROCESSING ANIMATION ***/
+.spinner {
+  z-index: 1;
+  width: 480px;
+  height: 360px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 0; left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.spinner > div {
+  background-color: #CCC;
+  height: 40px;
+  width: 6px;
+  display: inline-block;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-size: 10px;
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+/** END - PROCESSING ANIMATION **/
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
